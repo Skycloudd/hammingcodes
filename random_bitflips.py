@@ -1,7 +1,6 @@
 import random
 
 
-
 def flip_random(filecontents):
     bytes_filecontents = bytearray(filecontents)
     
@@ -11,6 +10,7 @@ def flip_random(filecontents):
     bytes_filecontents[byteindex] ^= 1 << bitindex
     
     return bytes(bytes_filecontents)
+
 
 def main():
     filename = "test"
@@ -24,6 +24,7 @@ def main():
     
     with open(filename, "wb") as f:
         f.write(filecontents)
+
 
 if __name__ == "__main__":
     main()
